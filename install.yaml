@@ -1,0 +1,8 @@
+---
+
+- hosts: 
+  tasks:
+  - name: Creating an empty file
+    file:
+      path: "/tmp/test.txt"
+      state: touch
