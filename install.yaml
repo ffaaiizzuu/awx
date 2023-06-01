@@ -2,9 +2,11 @@
 
 - hosts: localhost
   connection: local
+  gather_facts: yes
   tasks:
-  - name: ip of machine
-    shell: ip r
+    - name: Display IP Address
+      debug:
+        var: ansible_default_ipv4.address
   - name: Creating an empty file
     file:
       path: "/tmp/test.txt"
