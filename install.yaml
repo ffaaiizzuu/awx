@@ -7,6 +7,10 @@
     - name: Display IP Address
       debug:
         var: ansible_default_ipv4.address
+    
+    - name: create a file
+      shell: touch /tmp/abc.txt
+      
     - name: Creating an empty file
       file:
         path: "/tmp/test.txt"
