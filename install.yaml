@@ -3,6 +3,8 @@
 - hosts: localhost
   connection: local
   tasks:
+  - name: ip of machine
+    shell: ip r
   - name: Creating an empty file
     file:
       path: "/tmp/test.txt"
