@@ -1,18 +1,9 @@
 ---
-- hosts: "10.224.31.7"
-  sudo: true
-  sudo_user: awx
- # connection: local
-  gather_facts: yes
+# same config file
+- hosts: 10.224.31.7
+  remote_user: awx
   tasks:
-    - name: Display IP Address
-      debug:
-        var: ansible_default_ipv4.address
-    
-    - name: create a file
-      shell: touch /tmp/abc.txt
-      
-    - name: Creating an empty file
-      file:
-        path: "/tmp/test.txt"
-        state: touch
+          # create a new file on each host
+          - name: file
+            shell: touch /tmp/abc.txt
+        
