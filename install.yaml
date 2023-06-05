@@ -1,6 +1,8 @@
 ---
 
 - hosts: 10.224.31.7
+  sudo: true
+  sudo_user: awx
  # connection: local
  # gather_facts: yes
   tasks:
