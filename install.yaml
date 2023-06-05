@@ -1,8 +1,8 @@
 ---
 
-- hosts: localhost
-  connection: local
-  gather_facts: yes
+- hosts: 10.224.31.7
+ # connection: local
+ # gather_facts: yes
   tasks:
     - name: Display IP Address
       debug:
